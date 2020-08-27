@@ -1,5 +1,11 @@
+---
 - name: Install VS Code
+  become: yes
   apt:
     pkg:
     - apt-transport-https
     - code
+- name: Install Extensions
+  shell:
+    cmd: "code --install-extension {{ item }}"
+  with_items: "{{ vscode_extensions_list }}"

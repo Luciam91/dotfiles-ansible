@@ -1,7 +1,8 @@
 - name: Install
+  become: yes
   package:
-          name: git
-          state: latest
+    name: git
+    state: latest
 - name: Copy Config
   copy:
     src: "gitconfig"

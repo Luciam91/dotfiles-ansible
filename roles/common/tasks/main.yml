@@ -1,5 +1,11 @@
 - name: Install XClip
-  apt: name=xclip state=latest
+  become: yes
+  apt: 
+    name: xclip
+    state: latest
 
 - name: Install Curl
-  apt: name=curl state=latest
+  become: yes
+  apt: 
+    name: curl
+    state: latest
