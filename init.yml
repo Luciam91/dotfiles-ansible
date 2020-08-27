@@ -2,10 +2,7 @@
 - name: Create a new machine
   hosts: localhost
   roles:
+    - common
     - git
     - vscode
-  tasks:
-    - name: Install Tools
-      apt:
-        pkg:
-        - xclip
+    - signal
