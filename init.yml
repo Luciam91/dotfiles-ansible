@@ -1,14 +1,11 @@
 ---
 - name: Create a new machine
   hosts: localhost
+  roles:
+    - git
+    - vscode
   tasks:
-          - name: Install Base Tools
-            apt:
-                    pkg:
-                    - xclip
-                    - git
-          - name: Install VS Code
-            apt:
-                    pkg:
-                    - apt-transport-https
-                    - code
+    - name: Install Tools
+      apt:
+        pkg:
+        - xclip

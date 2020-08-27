@@ -1,0 +1,19 @@
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim
+[user]
+  name = Scott Pringle
+  email = pringlesc91@gmail.com
+
+[push]
+  default = current
+
+[pull]
+  default = current
+
+[alias]
+  co = checkout
+  fco = !git fetch && git checkout
+  uncommit = reset HEAD^
+[help]
+  autocorrect = 1

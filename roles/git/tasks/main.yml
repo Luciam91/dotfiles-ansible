@@ -1,0 +1,8 @@
+- name: Install
+  package:
+          name: git
+          state: latest
+- name: Copy Config
+  copy:
+    src: "gitconfig"
+    dest: "/home/scott/.gitconfig"
