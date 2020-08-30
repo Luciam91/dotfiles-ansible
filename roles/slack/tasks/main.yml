@@ -1,0 +1,4 @@
+- name: Install from Deb
+  become: yes
+  apt:
+    deb: https://downloads.slack-edge.com/linux_releases/slack-desktop-4.8.0-amd64.deb
