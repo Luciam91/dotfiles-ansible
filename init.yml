@@ -5,4 +5,5 @@
     - common
     - git
     - vscode
-    - signal
+    - docker
+    # - signal

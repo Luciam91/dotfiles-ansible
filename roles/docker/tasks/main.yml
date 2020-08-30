@@ -1,0 +1,9 @@
+- name: Remove old packages
+  apt:
+    pkg:
+      - docker 
+      - docker-engine 
+      - docker.io 
+      - containerd 
+      - runc
+    state: absent
