@@ -1,0 +1,18 @@
+- name: Remove NVM
+  file:
+    path: /tmp/nvm-install
+    state: absent
+- name: Download NVM
+  get_url:
+    url: https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh
+    dest: /tmp/nvm-install
+    mode: "u+x,g+x"
+    
+- name: Install NVM
+  shell: /tmp/nvm-install
+
+- name: Install Node
+  shell: source {{ ansible_env.HOME }}/.zshrc && nvm install --lts --latest-npm
+  register: output
+  args:
+    executable: /usr/bin/zsh

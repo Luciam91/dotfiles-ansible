@@ -8,4 +8,5 @@
     - go
     - docker
     - slack
+    - node
     # - signal
