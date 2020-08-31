@@ -1,4 +1,8 @@
 ---
+- name: Ensure ZSH Is Set up
+  hosts: localhost
+  roles:
+    - zsh
 - name: Create a new machine
   hosts: localhost
   roles:

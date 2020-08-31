@@ -16,3 +16,9 @@
   register: output
   args:
     executable: /usr/bin/zsh
+
+- name: Install global deps
+  npm:
+    name: "{{ item }}"
+    global: yes
+  with_items: "{{ npm_global_packages }}"

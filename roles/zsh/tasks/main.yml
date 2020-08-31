@@ -1,0 +1,19 @@
+- name: Install ZSH
+  become: yes
+  apt:
+    update_cache: true
+    name: zsh
+    state: present
+- name: Change Shell
+  become: yes
+  user:
+    name: "{{ lookup('env', 'USER') }}"
+    shell: "/usr/bin/zsh"
+- name: Clone oh-my-zsh
+  git:
+    repo: https://github.com/robbyrussell/oh-my-zsh.git
+    dest: "{{ ansible_env.HOME }}/.oh-my-zsh"
+- name: Write zshrc
+  copy:
+    src: "zshrc"
+    dest: "{{ ansible_env.HOME }}/.zshrc"

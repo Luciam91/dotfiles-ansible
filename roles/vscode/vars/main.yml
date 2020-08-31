@@ -4,3 +4,16 @@ vscode_extensions_list:
   - haaaad.ansible
   - golang.go
   - windmilleng.vscode-go-autotest
+  - dbaeumer.vscode-eslint
+  - ms-vscode.vscode-typescript-next
+  - eg2.vscode-npm-script
+  - christian-kohler.npm-intellisense
+  - christian-kohler.path-intellisense
+  - Shan.code-settings-sync
+  - esbenp.prettier-vscode
+  - xabikos.JavaScriptSnippets
+  - eamodio.gitlens
+  - ms-azuretools.vscode-docker
+  - henriiik.docker-linter
+  - p1c2u.docker-compose
+  - orta.vscode-jest
