@@ -5,6 +5,7 @@
     - common
     - git
     - vscode
+    - go
     - docker
     - slack
     # - signal
