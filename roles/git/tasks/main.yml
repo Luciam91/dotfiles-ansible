@@ -6,4 +6,4 @@
 - name: Copy Config
   copy:
     src: "gitconfig"
-    dest: "/home/scott/.gitconfig"
+    dest: "{{ lookup('env', 'HOME') }}/.gitconfig"
