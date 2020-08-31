@@ -8,5 +8,7 @@
 ## Run
 
 ```
-sudo ansible-playbook init.yml
+ansible-playbook init.yml
 ```
+
+Currently only supports Ubuntu/APT based installs, will be extended to include OSX eventually
