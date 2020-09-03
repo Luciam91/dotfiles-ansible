@@ -17,3 +17,4 @@ vscode_extensions_list:
   - henriiik.docker-linter
   - p1c2u.docker-compose
   - orta.vscode-jest
+  - bibhasdn.unique-lines
