@@ -17,3 +17,7 @@ vscode_extensions_list:
   - henriiik.docker-linter
   - p1c2u.docker-compose
   - orta.vscode-jest
+  - redhat.vscode-yaml
+  - dart-code.flutter
+  - nash.awesome-flutter-snippets
+  - gmlewis-vscode.flutter-stylizer

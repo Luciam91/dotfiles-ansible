@@ -6,11 +6,12 @@
 - name: Create a new machine
   hosts: localhost
   roles:
-    - common
-    - git
-    - vscode
-    - go
-    - docker
-    - slack
-    - node
+    # - common
+    # - git
+    # - vscode
+    # - go
+    # - docker
+    # - slack
+    # - node
+    - flutter
     # - signal
