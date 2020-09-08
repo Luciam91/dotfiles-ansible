@@ -1,6 +1,8 @@
 - name: Install Key
+  become: yes
   shell: curl -s https://updates.signal.org/desktop/apt/keys.asc | sudo apt-key add -
 - name: Add To Install List
+  become: yes
   shell: echo "deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main" | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
 - name: Install
   become: yes

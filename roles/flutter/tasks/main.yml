@@ -1,3 +1,11 @@
+- name: Ensure Java is Installed
+  apt:
+    update_cache: yes
+    pkg:
+      - default-jdk
+      - default-jre
+    state: present
+  become: yes
 - name: Download tar
   get_url:
     dest: /tmp/flutter # required. Absolute path of where to download the file to.,If C(dest) is a directory, either the server provided filename or, if none provided, the base name of the URL on the remote server will be used. If a directory, C(force) has no effect.,If C(dest) is a directory, the file will always be downloaded (regardless of the C(force) option), but replaced only if the contents changed..
@@ -10,4 +18,7 @@
     dest: "/usr/local/bin" # required. Remote absolute path where the archive should be unpacked.
     owner: "{{ lookup('env', 'USER') }}" # not required. Name of the user that should own the file/directory, as would be fed to I(chown).
     group: "{{ lookup('env', 'USER') }}"
+- name: Precache Dependencies
+  become: yes
+  shell: flutter precache
       
